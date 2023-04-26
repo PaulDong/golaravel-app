@@ -1,0 +1,1 @@
+# GoLaravel skeleton application
