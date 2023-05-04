@@ -1,15 +1,15 @@
-BINARY_NAME=bnlogicApp
+BINARY_NAME=GoLaravelApp.exe
 
 build:
 	@go mod vendor
-	@echo "Building BNLogic..."
+	@echo "Building GoLaravel..."
 	@go build -o tmp/${BINARY_NAME} .
-	@echo "BNLogic built!"
+	@echo "GoLaravel built!"
 
 run: build
-	@echo "Starting BNLogic..."
+	@echo "Starting GoLaravel..."
 	@./tmp/${BINARY_NAME} &
-	@echo "BNLogic started!"
+	@echo "GoLaravel started!"
 
 clean:
 	@echo "Cleaning..."
@@ -31,8 +31,8 @@ test:
 start: run
 
 stop:
-	@echo "Stopping BNLogic..."
+	@echo "Stopping GoLaravel..."
 	@-pkill -SIGTERM -f "./tmp/${BINARY_NAME}"
-	@echo "Stopped BNLogic!"
+	@echo "Stopped GoLaravel!"
 
 restart: stop start
