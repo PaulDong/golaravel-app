@@ -1,12 +1,8 @@
 package main
 
 import (
-	"bnlogic/data"
-	"fmt"
 	"net/http"
-	"strconv"
 
-	"github.com/PaulDong/golaravel/mailer"
 	"github.com/go-chi/chi/v5"
 )
 
