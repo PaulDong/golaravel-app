@@ -2,14 +2,14 @@ BINARY_NAME=${BINARY_NAME}.exe
 
 build:
 	@go mod vendor
-	@echo "Building GoLaravel..."
+	@echo "Building ${BINARY_NAME}..."
 	@go build -o tmp/${BINARY_NAME} .
-	@echo "GoLaravel built!"
+	@echo "${BINARY_NAME} built!"
 
 run: build
-	@echo "Starting GoLaravel..."
+	@echo "Starting ${BINARY_NAME}..."
 	@./tmp/${BINARY_NAME} &
-	@echo "GoLaravel started!"
+	@echo "${BINARY_NAME} started!"
 
 clean:
 	@echo "Cleaning..."
@@ -31,8 +31,8 @@ test:
 start: run
 
 stop:
-	@echo "Stopping GoLaravel..."
+	@echo "Stopping ${BINARY_NAME}..."
 	@-pkill -SIGTERM -f "./tmp/${BINARY_NAME}"
-	@echo "Stopped GoLaravel!"
+	@echo "Stopped ${BINARY_NAME}!"
 
 restart: stop start
