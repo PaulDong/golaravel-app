@@ -1,4 +1,4 @@
-BINARY_NAME=GoLaravelApp.exe
+BINARY_NAME=${BINARY_NAME}.exe
 
 build:
 	@go mod vendor

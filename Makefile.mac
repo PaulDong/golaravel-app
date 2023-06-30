@@ -1,4 +1,4 @@
-BINARY_NAME=golaravelApp
+BINARY_NAME=${BINARY_NAME}
 
 build:
 	@go mod vendor
